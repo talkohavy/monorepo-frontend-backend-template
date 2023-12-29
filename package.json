@@ -1,14 +1,17 @@
 {
-  "name": "frontend-backend-template",
+  "name": "root",
   "version": "1.0.0",
+  "private": "true",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "dev-front": "cd apps/frontend && pnpm run dev"
+    "dev-front": "cd apps/frontend && pnpm run dev",
+    "dev-back": "cd apps/backend && pnpm run dev"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "eslint": "^8.56.0",
     "eslint-plugin-ezlint": "^1.0.15",
