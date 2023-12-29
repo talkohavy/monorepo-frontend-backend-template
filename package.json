@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev-front": "cd apps/frontend && pnpm run dev"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "eslint": "^8.56.0",
-    "eslint-plugin-ezlint": "^1.0.15"
+    "eslint-plugin-ezlint": "^1.0.15",
+    "prettier": "^3.1.1"
   }
 }
