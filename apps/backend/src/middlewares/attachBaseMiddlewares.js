@@ -8,7 +8,7 @@ function attachBaseMiddlewares({ app, bodySizeLimit = '10mb' }) {
   app.disable('x-powered-by');
   app.set('etag', false);
 
-  attachHelmetMiddleware(app);
+  attachHelmetMiddleware({ app });
 
   app.use(express.json({ limit: bodySizeLimit }));
   app.use(express.urlencoded({ extended: true, limit: '1mb' }));

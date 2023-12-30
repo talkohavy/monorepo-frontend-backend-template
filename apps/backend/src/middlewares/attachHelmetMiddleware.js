@@ -14,7 +14,7 @@ import {
   xXssProtection,
 } from 'helmet';
 
-function attachHelmetMiddleware(app) {
+function attachHelmetMiddleware({ app }) {
   app.use(contentSecurityPolicy());
   app.use(crossOriginEmbedderPolicy({ policy: 'require-corp' }));
   app.use(crossOriginOpenerPolicy({ policy: 'same-origin' }));
