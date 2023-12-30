@@ -1,0 +1,6 @@
+{
+  "verbose": true,
+  "ignore": [".git", "node_modules", "**/node_modules"],
+  "delay": 30,
+  "watch": ["./apps/**/src", "./packages/**/src", "./clients/**/src"]
+}
