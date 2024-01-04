@@ -1,7 +1,6 @@
 import compression from 'compression';
 import cors from 'cors';
 import express from 'express';
-import { FRONTENDS } from '../configurations/index.js';
 import { attachHelmetMiddleware } from './attachHelmetMiddleware.js';
 
 function attachBaseMiddlewares({ app, bodySizeLimit = '10mb' }) {
@@ -16,7 +15,7 @@ function attachBaseMiddlewares({ app, bodySizeLimit = '10mb' }) {
 
   app.use(
     cors({
-      origin: FRONTENDS,
+      origin: process.env.FRONTENDS,
       methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE'],
     }),
   );

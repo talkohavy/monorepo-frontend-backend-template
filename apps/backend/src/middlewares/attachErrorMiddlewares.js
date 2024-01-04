@@ -12,20 +12,6 @@ function attachErrorMiddlewares({ app }) {
   app.use(errorHandlerMiddleware);
 }
 
-function errorHandlerMiddleware(error, _req, res, _) {
-  const statusCode = error.statusCode || 500;
-  const data = error.data || error.frontendMessage || error.message;
-  console.error('▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼');
-  console.error(error);
-  console.error('▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲');
-
-  if (error.shouldReport) {
-    console.log('store the error!');
-  }
-
-  return res.status(statusCode).json(data);
-}
-
 function pathNotFoundMiddleware(req, res, next) {
   console.error('req.originalUrl is:', req.originalUrl);
   console.error('req.path is:', req.path);
@@ -33,6 +19,18 @@ function pathNotFoundMiddleware(req, res, next) {
   console.error('req.body is:', req.body);
   console.error('req.params is:', req.params);
   next();
+}
+
+function errorHandlerMiddleware(error, req, res, next) {
+  const statusCode = 500;
+  const data = error.message;
+  console.error('▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼');
+  console.error(error);
+  console.error('▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲');
+
+  console.log('store the error if <condition>...');
+
+  return res.status(statusCode).json(data);
 }
 
 export { attachErrorMiddlewares };
