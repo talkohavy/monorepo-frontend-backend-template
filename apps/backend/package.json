@@ -5,7 +5,13 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "clean": "rm -rf node_modules",
+    "dev": "nodemon src/index.js",
+    "lint": "eslint -c ../../.eslintrc.json --ignore-path ../../.eslintignore '**/*/*.{js,jsx,tsx,ts,d.ts,cjs,mjs}'",
+    "lint-fix": "eslint --fix -c ../../.eslintrc.json --ignore-path ../../.eslintignore '**/*/*.{js,jsx,tsx,ts,d.ts,cjs,mjs}'",
+    "format": "prettier . --check --config ../../.prettierrc.mjs --ignore-path ../../.prettierignore",
+    "test": "node --test",
+    "typecheck": "tsc -p ../../jsconfig.json"
   },
   "keywords": [],
   "author": "",
