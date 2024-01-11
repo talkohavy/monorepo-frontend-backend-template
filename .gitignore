@@ -3,3 +3,7 @@
 **/.env*
 .vscode/
 **/_ignore_
+
+# I added these:
+.turbo
+jsconfig.tsbuildinfo
