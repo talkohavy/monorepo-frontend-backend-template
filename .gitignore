@@ -1,7 +1,6 @@
 **/node_modules
 **/.DS_Store
 **/.env*
-.vscode/
 **/_ignore_
 
 # I added these:

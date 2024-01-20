@@ -11,16 +11,11 @@
     "vite-optimize": "vite optimize --force",
     "lint": "eslint -c .eslintrc.json '**/*/*.{js,jsx,tsx,ts,d.ts,cjs,mjs}'",
     "lint-fix": "eslint --fix -c .eslintrc.cjs '**/*/*.{js,jsx,tsx,ts,d.ts,cjs,mjs}'",
-<<<<<<< Updated upstream
-    "format": "prettier . --check --config ../../.prettierrc.mjs --ignore-path ../../.prettierignore",
-=======
     "format": "biome format --verbose ./src",
     "format-prettier": "prettier . --check --config ../../.prettierrc.mjs --ignore-path ../../.prettierignore",
     "format-fix": "prettier . --write --config ../../.prettierrc.mjs --ignore-path ../../.prettierignore",
     "typecheck": "tsc -p jsconfig.json",
->>>>>>> Stashed changes
-    "test": "node --test",
-    "typecheck": "tsc -p jsconfig.json"
+    "test": "node --test"
   },
   "dependencies": {
     "clsx": "^2.0.0",
