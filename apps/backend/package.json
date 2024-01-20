@@ -9,7 +9,8 @@
     "dev": "nodemon src/index.js",
     "lint": "eslint -c ../../.eslintrc.json --ignore-path ../../.eslintignore '**/*/*.{js,jsx,tsx,ts,d.ts,cjs,mjs}'",
     "lint-fix": "eslint --fix -c ../../.eslintrc.json --ignore-path ../../.eslintignore '**/*/*.{js,jsx,tsx,ts,d.ts,cjs,mjs}'",
-    "format": "prettier . --check --config ../../.prettierrc.mjs --ignore-path ../../.prettierignore",
+    "format": "biome format --verbose ./src",
+    "format-prettier": "prettier . --check --config ../../.prettierrc.mjs --ignore-path ../../.prettierignore",
     "test": "node --test",
     "typecheck": "tsc -p ../../jsconfig.json"
   },
