@@ -3,7 +3,7 @@
     // -------------------
     // Section 1: Projects
     // -------------------
-    "incremental": true, // Save .tsbuildinfo files to allow for incremental compilation of projects.
+    "incremental": false, // Save .tsbuildinfo files to allow for incremental compilation of projects.
 
     // -----------------------------------
     // Section 2: Language and Environment
