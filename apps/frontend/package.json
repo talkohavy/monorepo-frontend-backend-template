@@ -18,6 +18,7 @@
     "test": "node --test"
   },
   "dependencies": {
+    "@vitejs/plugin-react-swc": "^3.6.0",
     "clsx": "^2.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -27,7 +28,6 @@
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "@typescript-eslint/parser": "^6.13.2",
-    "@vitejs/plugin-react": "^4.2.0",
     "autoprefixer": "^10.4.16",
     "eslint": "^8.53.0",
     "eslint-import-resolver-typescript": "^3.6.1",
