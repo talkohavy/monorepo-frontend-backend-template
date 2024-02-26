@@ -18,8 +18,8 @@ importers:
         specifier: ^8.56.0
         version: 8.56.0
       eslint-plugin-ezlint:
-        specifier: ^1.0.25
-        version: 1.0.25(eslint@8.56.0)(typescript@5.3.3)
+        specifier: ^1.1.6
+        version: 1.1.6(eslint@8.56.0)(tailwindcss@3.4.0)(typescript@5.3.3)
       prettier:
         specifier: ^3.1.1
         version: 3.1.1
@@ -1732,8 +1732,8 @@ packages:
       regexpp: 3.2.0
     dev: true
 
-  /eslint-plugin-ezlint@1.0.25(eslint@8.56.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-d0u67r3LTak8z/aGhMwEBHaVgbqfEtl9ZVzVP3cAsp9yXX+6lSVvQvyBQzDih3FDeMxbZjGPua8i3PY+C0egKQ==}
+  /eslint-plugin-ezlint@1.1.6(eslint@8.56.0)(tailwindcss@3.4.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-lA4REAISd5ttgQSV49dn+0bc9GyezqxBSebx7QUX9ycljl8mOWHyuVOOaunxjJP01pYauQtvoc51sIM2m5YBaw==}
     engines: {node: ^14.17.0 || ^16.0.0 || >= 18.0.0}
     peerDependencies:
       eslint: '>=7'
@@ -1744,11 +1744,14 @@ packages:
       eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@6.16.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
       eslint-plugin-import: 2.29.1(@typescript-eslint/parser@6.16.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
       eslint-plugin-jsdoc: 46.9.1(eslint@8.56.0)
+      eslint-plugin-react: 7.33.2(eslint@8.56.0)
       eslint-plugin-sort-exports: 0.8.0(eslint@8.56.0)
+      eslint-plugin-tailwindcss: 3.14.3(tailwindcss@3.4.0)
     transitivePeerDependencies:
       - eslint-import-resolver-node
       - eslint-import-resolver-webpack
       - supports-color
+      - tailwindcss
       - typescript
     dev: true
 
@@ -1877,6 +1880,17 @@ packages:
     engines: {node: '>=12.13.0'}
     peerDependencies:
       tailwindcss: ^3.3.2
+    dependencies:
+      fast-glob: 3.3.2
+      postcss: 8.4.32
+      tailwindcss: 3.4.0
+    dev: true
+
+  /eslint-plugin-tailwindcss@3.14.3(tailwindcss@3.4.0):
+    resolution: {integrity: sha512-1MKT8CrVuqVJleHxb7ICHsF2QwO0G+VJ28athTtlcOkccp0qmwK7nCUa1C9paCZ+VVgQU4fonsjLz/wUxoMHJQ==}
+    engines: {node: '>=12.13.0'}
+    peerDependencies:
+      tailwindcss: ^3.4.0
     dependencies:
       fast-glob: 3.3.2
       postcss: 8.4.32
